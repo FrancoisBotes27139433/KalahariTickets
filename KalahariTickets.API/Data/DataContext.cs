@@ -8,5 +8,7 @@ namespace KalahariTickets.API.Data
         public DataContext(DbContextOptions<DataContext> options) : base (options) {}
 
         public DbSet<Value> Values { get; set; }
+
+        public DbSet<Client> Clients { get; set; }
     }
 }
