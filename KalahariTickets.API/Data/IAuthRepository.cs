@@ -11,6 +11,6 @@ namespace KalahariTickets.API.Data
 
          Task<bool> UserExists(string username);
 
-         Task<bool> Admin(string username);
+         Task<bool> Admin(string username); 
     }
 }

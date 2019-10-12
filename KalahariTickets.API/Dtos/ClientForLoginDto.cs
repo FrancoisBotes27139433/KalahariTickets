@@ -1,14 +1,9 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace KalahariTickets.API.Dtos
 {
-    public class ClientForRegisterDto
+    public class ClientForLoginDto
     {
-
-        [Required]
         public string Username { get; set; }
 
-        [Required]
         public string Password { get; set; }
     }
 }

@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using KalahariTickets.API.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace KalahariTickets.API.Controllers
 {
+   // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -19,6 +21,8 @@ namespace KalahariTickets.API.Controllers
             _context = context;
 
         }
+
+
         // GET api/values
         [HttpGet]
         public async Task<IActionResult> GetValues()
@@ -27,7 +31,7 @@ namespace KalahariTickets.API.Controllers
 
            return Ok(values);
         }
-
+        //[AllowAnonymous]
         // GET api/values/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValues(int id)
