@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace KalahariTickets.API.Controllers
 {
-   // [Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -31,7 +31,7 @@ namespace KalahariTickets.API.Controllers
 
            return Ok(values);
         }
-        //[AllowAnonymous]
+        [AllowAnonymous]
         // GET api/values/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetValues(int id)

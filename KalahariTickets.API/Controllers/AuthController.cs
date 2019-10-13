@@ -57,7 +57,7 @@ namespace KalahariTickets.API.Controllers
 
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, clientFromRepo.ClientId.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, clientFromRepo.Id.ToString()),
                 new Claim(ClaimTypes.Name, clientFromRepo.Username)
             };
 
