@@ -17,10 +17,10 @@ namespace KalahariTickets.API.Models
         public string Email { get; set; } 
 
         public DateTime  DateAdded { get; set; }
-        
+
         public string Address { get; set; }
 
-        public ICollection<Tickets> Tickets { get; set; }
+        public IEnumerable<Tickets> Tickets { get; set; }
 
       //  public bool IsAdmin { get; set; }
 

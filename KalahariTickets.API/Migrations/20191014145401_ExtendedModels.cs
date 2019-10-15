@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace KalahariTickets.API.Migrations
 {
-    public partial class ExtendedMigrationAllModels : Migration
+    public partial class ExtendedModels : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -53,7 +53,7 @@ namespace KalahariTickets.API.Migrations
                     DateClossed = table.Column<DateTime>(nullable: false),
                     Open = table.Column<bool>(nullable: false),
                     ClientId = table.Column<int>(nullable: false),
-                    TechnitionId = table.Column<int>(nullable: false)
+                    TechnitionId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {

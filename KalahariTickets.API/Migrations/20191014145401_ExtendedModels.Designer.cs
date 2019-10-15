@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KalahariTickets.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191013175853_ExtendedMigrationAllModels")]
-    partial class ExtendedMigrationAllModels
+    [Migration("20191014145401_ExtendedModels")]
+    partial class ExtendedModels
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
