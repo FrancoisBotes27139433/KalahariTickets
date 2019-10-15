@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using KalahariTickets.API.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace KalahariTickets.API.Data
 {
@@ -25,14 +26,22 @@ namespace KalahariTickets.API.Data
 
         public async Task<Client> GetClient(int id)
         {
-           var client = await _context.Clients.Include(t => t.Tickets).FirstOrDefaultAsync(c => c.Id == id);
+          /* var client = await _context.Clients.Include(t => t.Tickets).FirstOrDefaultAsync(c => c.Id == id);
+
+           return client;*/
+
+            var client = await _context.Clients.FirstOrDefaultAsync(c => c.Id == id);
 
            return client;
         }
 
         public async Task<IEnumerable<Client>> GetClients()
         {
-            var clients = await _context.Clients.Include(t => t.Tickets).ToListAsync();
+           /* var clients = await _context.Clients.Include(t => t.Tickets).ToListAsync();
+
+            return clients;*/
+
+            var clients = await _context.Clients.ToListAsync();
 
             return clients;
         }
