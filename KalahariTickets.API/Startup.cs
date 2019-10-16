@@ -38,8 +38,11 @@ namespace KalahariTickets.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddCors();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddTransient<KalahariTicketsRepository, KalahariTicketsRepository>();
           //  services.AddScoped<IKalahariTicketsInterface>(sp => sp.GetService< KalahariTicketsRepository>());
             services.AddScoped<IKalahariTicketsInterface, KalahariTicketsRepository>();
+           // services.AddTransient<IKalahariTicketsInterface,KalahariTicketsRepository>();
+           // services.AddSingleton<IKalahariTicketsInterface , KalahariTicketsRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters

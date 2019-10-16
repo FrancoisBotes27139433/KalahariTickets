@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace KalahariTickets.API.Controllers
 {
-    // [Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
 

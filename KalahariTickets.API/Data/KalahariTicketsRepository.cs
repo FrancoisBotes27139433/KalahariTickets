@@ -26,24 +26,24 @@ namespace KalahariTickets.API.Data
 
         public async Task<Client> GetClient(int id)
         {
-          /* var client = await _context.Clients.Include(t => t.Tickets).FirstOrDefaultAsync(c => c.Id == id);
-
-           return client;*/
-
-            var client = await _context.Clients.FirstOrDefaultAsync(c => c.Id == id);
+           var client = await _context.Clients.Include(t => t.Tickets).FirstOrDefaultAsync(c => c.Id == id);
 
            return client;
+
+           // var client = await _context.Clients.FirstOrDefaultAsync(c => c.Id == id);
+
+           //return client;
         }
 
         public async Task<IEnumerable<Client>> GetClients()
         {
-           /* var clients = await _context.Clients.Include(t => t.Tickets).ToListAsync();
-
-            return clients;*/
-
-            var clients = await _context.Clients.ToListAsync();
+            var clients = await _context.Clients.Include(t => t.Tickets).ToListAsync();
 
             return clients;
+
+           // var clients = await _context.Clients.ToListAsync();
+
+           // return clients;
         }
 
         public async Task<Technition> GetTechnition(int id)
