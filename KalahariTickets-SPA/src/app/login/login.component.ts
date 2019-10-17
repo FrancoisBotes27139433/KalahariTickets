@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
-import { AuthService } from './_services/auth.service';
-
-
-
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./styles.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class AppComponent {
-  constructor(private authService: AuthService) { }
-  title = 'KalahariTickets';
+export class LoginComponent implements OnInit {
   model: any = {};
+
+  constructor(private authService: AuthService) { }
+
+  ngOnInit() {
+  }
 
   login() {
     this.authService.login(this.model).subscribe(next => {
@@ -31,4 +31,5 @@ export class AppComponent {
     localStorage.removeItem('token');
     console.log('logged out');
   }
+
 }

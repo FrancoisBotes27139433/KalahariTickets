@@ -1,4 +1,27 @@
-<app-log></app-log>
-
-
-
+<header>
+    <form #loginForm="ngForm" class="form-inline my-2 my-lg-0" (ngSubmit)="login()">
+        <div class="container">
+          <ng-template [ngIf]="loggedIn()">
+            <a routerLink="/home" class="logo">KalahariTickets</a>
+          </ng-template>
+          
+          <ng-template [ngIf]="!loggedIn()">
+              <a class="logo">KalahariTickets</a>
+            </ng-template>
+        
+        
+        <nav>
+            <ul>
+              <li><a *ngIf="loggedIn()" href="#" routerLink="/ticket">Tickets</a></li>
+              <li *ngIf="loggedIn()"><a href="#" routerLink="/client">Clients</a></li>
+              <li *ngIf="loggedIn()"><a href="#" routerLink="/tech">Technicians</a></li>
+              <li *ngIf="!loggedIn()"><a href="#" routerLink="/login">Login</a></li>
+              <li *ngIf="loggedIn()"><a href="#" (click)="logout()" routerLink="/login">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </form>
+</header>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>

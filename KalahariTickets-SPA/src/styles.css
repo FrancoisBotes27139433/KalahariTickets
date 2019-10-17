@@ -2,3 +2,42 @@
 
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Nunito', 'sans-serif';
+    font-size: 18px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+header {
+    background: #424242;
+    padding: 1em 0;
+}
+header a {
+    color: white;
+    text-decoration: none;
+}
+header a.logo {
+    font-weight: bold;
+}
+header nav {
+    float: right;
+}
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+}
+header nav ul li a {
+    padding: 1em;
+}
+header nav ul li a:hover {
+    background: #424242;
+}
+h1 {
+    margin-top: 2em;
+}

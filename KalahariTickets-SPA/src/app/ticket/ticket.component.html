@@ -1,0 +1,17 @@
+<h1>Tickets</h1>
+
+<ul>
+  <li>
+    <p class="name">Ticket</p>
+    <p class="country">User</p>
+    <a class="site">Open</a>
+  </li>
+</ul>
+
+<ul *ngIf="model">
+  <li *ngFor="let brew of model">
+    <p class="name">{{ brew.name }}</p>
+    <p class="country">{{ brew.country }}</p>
+    <a class="site" href="{{ brew.website_url }}">site</a>
+  </li>
+</ul>
