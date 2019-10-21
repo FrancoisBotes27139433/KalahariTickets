@@ -1,0 +1,19 @@
+<form *ngIf="!loggedIn()" #loginForm="ngForm" class="form-signin" (ngSubmit)="login()">
+    <div class="col-6">
+
+      <h1 class="h2 mb-3">Login</h1>
+      <label for="inputEmail" class="sr-only">Username</label>
+      <input type="text" class="form-control mb-3" name="username" placeholder="Username" required [(ngModel)]="model.username">
+      
+      <label for="inputPassword" class="sr-only">Password</label>
+
+      <input type="password" class="form-control" name="password" placeholder="Password" required [(ngModel)]="model.password">
+
+      <button  [disabled]="!loginForm.valid" class="btn green darken-4 mt-3" type="submit">Login</button>
+    </div>
+
+  </form>
+
+  
+
+  

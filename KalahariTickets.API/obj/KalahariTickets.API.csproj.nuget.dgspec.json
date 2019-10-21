@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {}
   },
   "projects": {
@@ -18,6 +19,25 @@
         ],
         "configFilePaths": [
           "C:\\Users\\Francois\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {}
+  },
+  "projects": {
+    "D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
+        "projectName": "KalahariTickets.API",
+        "projectPath": "D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
+        "packagesPath": "C:\\Users\\dovuu\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dovuu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> master
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,10 +61,13 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
+<<<<<<< HEAD
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
+=======
+>>>>>>> master
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
