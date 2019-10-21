@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gerri\\Documents\\NWU\\ITRW324\\ProjectNew\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {}
+    "D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gerri\\Documents\\NWU\\ITRW324\\ProjectNew\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {
+    "D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gerri\\Documents\\NWU\\ITRW324\\ProjectNew\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
+        "projectUniqueName": "D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
         "projectName": "KalahariTickets.API",
-        "projectPath": "C:\\Users\\gerri\\Documents\\NWU\\ITRW324\\ProjectNew\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
-        "packagesPath": "C:\\Users\\gerri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gerri\\Documents\\NWU\\ITRW324\\ProjectNew\\KalahariTickets\\KalahariTickets.API\\obj\\",
+        "projectPath": "D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
+        "packagesPath": "C:\\Users\\dovuu\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\gerri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dovuu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

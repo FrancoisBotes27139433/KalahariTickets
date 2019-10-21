@@ -1,17 +1,17 @@
-<header>
+<header class="navbar navbar-dark center green darken-4">
     <form #loginForm="ngForm" class="form-inline my-2 my-lg-0" (ngSubmit)="login()">
-        <div class="container">
+        <div class="container center">
           <ng-template [ngIf]="loggedIn()">
-            <a routerLink="/home" class="logo">KalahariTickets</a>
+            <a routerLink="/home" class="logo" style="font-size: 200%;">KalahariTickets</a>
           </ng-template>
           
           <ng-template [ngIf]="!loggedIn()">
-              <a class="logo">KalahariTickets</a>
+              <a class="logo" style="font-size: 200%;">KalahariTickets</a>
             </ng-template>
         
         
         <nav>
-            <ul>
+            <ul class="btn green green darken-4">
               <li><a *ngIf="loggedIn()" href="#" routerLink="/ticket">Tickets</a></li>
               <li *ngIf="loggedIn()"><a href="#" routerLink="/client">Clients</a></li>
               <li *ngIf="loggedIn()"><a href="#" routerLink="/tech">Technicians</a></li>

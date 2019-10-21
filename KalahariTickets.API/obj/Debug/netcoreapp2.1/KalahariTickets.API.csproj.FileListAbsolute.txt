@@ -26,3 +26,17 @@ C:\Users\gerri\Documents\NWU\ITRW324\ProjectNew\KalahariTickets\KalahariTickets.
 C:\Users\gerri\Documents\NWU\ITRW324\ProjectNew\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.RazorTargetAssemblyInfo.cache
 C:\Users\gerri\Documents\NWU\ITRW324\ProjectNew\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.dll
 C:\Users\gerri\Documents\NWU\ITRW324\ProjectNew\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.pdb
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\bin\Debug\netcoreapp2.1\KalahariTickets.API.deps.json
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\bin\Debug\netcoreapp2.1\KalahariTickets.API.runtimeconfig.json
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\bin\Debug\netcoreapp2.1\KalahariTickets.API.runtimeconfig.dev.json
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\bin\Debug\netcoreapp2.1\KalahariTickets.API.dll
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\bin\Debug\netcoreapp2.1\KalahariTickets.API.pdb
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.csprojAssemblyReference.cache
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.csproj.CoreCompileInputs.cache
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.RazorAssemblyInfo.cache
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.RazorAssemblyInfo.cs
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.AssemblyInfoInputs.cache
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.AssemblyInfo.cs
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.RazorTargetAssemblyInfo.cache
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.dll
+D:\OneDrive\Universiteit Klasse\Vierdejaar\324\KalahariTickets\KalahariTickets.API\obj\Debug\netcoreapp2.1\KalahariTickets.API.pdb
