@@ -19,6 +19,7 @@ using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using KalahariTickets.API.Helpers;
+using AutoMapper;
 
 namespace KalahariTickets.API
 {
@@ -35,10 +36,15 @@ namespace KalahariTickets.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddJsonOptions(opt => {
+                    opt.SerializerSettings.ReferenceLoopHandling = 
+                        Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
             services.AddCors();
+            services.AddAutoMapper(typeof(KalahariTicketsRepository).Assembly);
             services.AddScoped<IAuthRepository, AuthRepository>();
-            services.AddTransient<KalahariTicketsRepository, KalahariTicketsRepository>();
+            //services.AddTransient<KalahariTicketsRepository, KalahariTicketsRepository>();
           //  services.AddScoped<IKalahariTicketsInterface>(sp => sp.GetService< KalahariTicketsRepository>());
             services.AddScoped<IKalahariTicketsInterface, KalahariTicketsRepository>();
            // services.AddTransient<IKalahariTicketsInterface,KalahariTicketsRepository>();

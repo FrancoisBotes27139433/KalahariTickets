@@ -20,12 +20,12 @@ namespace KalahariTickets.API.Models
 
          public bool Open { get; set; }
 
-         public Client Client {get;set;}
+         public virtual Client Client {get;set;}
 
-         public int ClientId { get; set; }
+         public virtual int ClientId { get; set; }
 
-        public Technition Technition {get;set;}
-        public int TechnitionId { get; set; }
+        public virtual Technition Technition {get;set;}
+        public virtual int TechnitionId { get; set; }
 
 
          

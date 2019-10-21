@@ -8,6 +8,6 @@ namespace KalahariTickets.API.Models
 
         public string Name { get; set; }
 
-         public IEnumerable<Tickets> Tickets { get; set; }
+         public ICollection<Tickets> Tickets { get; set; }
     }
 }
