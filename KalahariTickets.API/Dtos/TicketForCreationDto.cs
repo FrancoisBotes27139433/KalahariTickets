@@ -25,6 +25,7 @@ namespace KalahariTickets.API.Dtos
             IsUrgent = false;
             Open = false;
             Notes = "";
+            //TechnitionId = null;
         }
 
     }

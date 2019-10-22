@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KalahariTickets.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191020191904_VirtualEntities")]
-    partial class VirtualEntities
+    [Migration("20191022105237_LatestMigration")]
+    partial class LatestMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -97,7 +97,7 @@ namespace KalahariTickets.API.Migrations
 
                     b.Property<bool>("Open");
 
-                    b.Property<int>("TechnitionId");
+                    b.Property<int?>("TechnitionId");
 
                     b.Property<string>("Title");
 
@@ -141,10 +141,9 @@ namespace KalahariTickets.API.Migrations
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("KalahariTickets.API.Models.Technition", "Technition")
+                    b.HasOne("KalahariTickets.API.Models.Technition")
                         .WithMany("Tickets")
-                        .HasForeignKey("TechnitionId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("TechnitionId");
                 });
 #pragma warning restore 612, 618
         }

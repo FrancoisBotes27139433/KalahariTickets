@@ -12,6 +12,8 @@ namespace KalahariTickets.API.Helpers
             CreateMap<Client, ClientForDetailedDto>();
             CreateMap<Tickets, TicketsForDetailedDto>();
             CreateMap<ClientForUpdateDto, Client>();
+            CreateMap<Tickets, TicketsForDetailedDto>();
+            CreateMap<TicketForCreationDto, Tickets>();
             
         }
     }

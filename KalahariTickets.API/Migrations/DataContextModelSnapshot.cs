@@ -95,7 +95,7 @@ namespace KalahariTickets.API.Migrations
 
                     b.Property<bool>("Open");
 
-                    b.Property<int>("TechnitionId");
+                    b.Property<int?>("TechnitionId");
 
                     b.Property<string>("Title");
 
@@ -139,10 +139,9 @@ namespace KalahariTickets.API.Migrations
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("KalahariTickets.API.Models.Technition", "Technition")
+                    b.HasOne("KalahariTickets.API.Models.Technition")
                         .WithMany("Tickets")
-                        .HasForeignKey("TechnitionId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("TechnitionId");
                 });
 #pragma warning restore 612, 618
         }
