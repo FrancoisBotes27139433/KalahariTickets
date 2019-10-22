@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
+import { JwtModule } from '@auth0/angular-jwt';
 
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
@@ -20,9 +21,9 @@ import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { OpenClientComponent } from './open-client/open-client.component';
 
-
-
-
+export function tokenGetter() {
+   return localStorage.getItem('token');
+ }
 
 @NgModule({
    declarations: [
@@ -45,7 +46,14 @@ import { OpenClientComponent } from './open-client/open-client.component';
       HttpClientModule,
       FormsModule,
       RouterModule,
-      AppRoutingModule
+      AppRoutingModule,
+      JwtModule.forRoot({
+         config: {
+           tokenGetter,
+           whitelistedDomains: ['localhost:5000'],
+           blacklistedRoutes: ['localhost:5000/api/auth']
+         }
+       })
    ],
    providers: [
       AuthService
