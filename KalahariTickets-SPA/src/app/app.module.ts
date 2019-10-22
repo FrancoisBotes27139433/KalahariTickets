@@ -14,6 +14,12 @@ import { TechnicianComponent } from './technician/technician.component';
 import { AppRoutingModule} from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AddClientComponent } from './add-client/add-client.component';
+import { OpenTicketComponent } from './open-ticket/open-ticket.component';
+import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
+import { AddTicketComponent } from './add-ticket/add-ticket.component';
+import { OpenClientComponent } from './open-client/open-client.component';
+
 
 
 
@@ -27,7 +33,12 @@ import { HomeComponent } from './home/home.component';
       TicketComponent,
       TechnicianComponent,
       LoginComponent,
-      HomeComponent
+      HomeComponent,
+      AddClientComponent,
+      OpenTicketComponent,
+      EditTicketComponent,
+      AddTicketComponent,
+      OpenClientComponent
    ],
    imports: [
       BrowserModule,

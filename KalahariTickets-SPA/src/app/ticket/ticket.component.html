@@ -1,4 +1,5 @@
-<h2>Tickets</h2>
+<h2>All Tickets</h2>
+
 <div class="col s12 m6 l3">
   <div class="card stickey-action green darken-4 hoverable activato">
       <div class="card-content white-text">
@@ -14,16 +15,9 @@
           <p>@ticket.Notes</p>
       </div>
       <div class="card-action white-text accent-4">
-          <a asp-action="Open" asp-route-id="@ticket.Id">Open</a>
+          <a [routerLink]="['/openticket']" >Open</a>
       </div>
   </div>
 </div>
 
 
-<ul *ngIf="model">
-  <li *ngFor="let brew of model">
-    <p class="name">{{ brew.name }}</p>
-    <p class="country">{{ brew.country }}</p>
-    <a class="site" href="{{ brew.website_url }}">site</a>
-  </li>
-</ul>

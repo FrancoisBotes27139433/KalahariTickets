@@ -1,9 +1,38 @@
-<h1>Clients</h1>
+<h2>All Clients</h2>
 
-<ul>
-  <li>
-    <p class="name">Client Name</p>
-    <p class="country">User</p>
-    <a class="site">Open</a>
-  </li>
-</ul>
+<a [routerLink]="['/addclient']">Add Client</a>
+
+<div class="row">
+  <div class="col s11 m5">
+      <div class="card green darken-4 stickey-action hoverable">
+          <div class="card-content white-text activator">
+              <span class="card-title">Firstname & Lastname</span>
+              <p>Company</p><br>
+              <p>Open Tickets: OpenTicketCount</p>
+          </div>
+          <div class="card-action">
+              <a [routerLink]="['/addticket']" >Add Ticket</a>
+              <a [routerLink]="['/openclient']" >Open</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- <div *ngFor="let client of client">
+  <div class="row">
+    <div class="col s11 m5">
+        <div class="card green darken-4 stickey-action hoverable">
+            <div class="card-content white-text activator">
+                <span class="card-title">{{client.Firstname}}</span>
+                <p>{{client.Company}}</p><br>
+                <p>Open Tickets: {{client.OpenTicketCount}}</p>
+            </div>
+            <div class="card-action">
+                <a>Add Ticket</a>
+                <a>Open</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div> -->
+
