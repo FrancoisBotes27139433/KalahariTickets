@@ -68,6 +68,13 @@ namespace KalahariTickets.API.Data
             return technitions;
         }
 
+        public async  Task<Tickets> GetTicket(int id)
+        {
+            var ticket = await _context.Tickets.FirstOrDefaultAsync(t => t.Id == id);
+
+            return ticket;
+        }
+
         public async Task<bool> SaveAll()
         {
            return await _context.SaveChangesAsync() > 0;
