@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using KalahariTickets.API.Models;
 using Microsoft.EntityFrameworkCore;
@@ -50,6 +52,11 @@ namespace KalahariTickets.API.Data
            // return clients;
         }
 
+        public async Task<List<Tickets>> GetOpenTicketsForClient(int userId)
+        {
+            return await _context.Tickets.Where(u => u.ClientId == userId).ToListAsync();
+        }
+
         public async Task<Technition> GetTechnition(int id)
         {
            var technition = await _context.Technitions.Include(t => t.Tickets).FirstOrDefaultAsync(c => c.Id == id);
@@ -68,16 +75,36 @@ namespace KalahariTickets.API.Data
             return technitions;
         }
 
-        public async  Task<Tickets> GetTicket(int id)
+        public async Task<Tickets> GetTicket(int id)
         {
             var ticket = await _context.Tickets.FirstOrDefaultAsync(t => t.Id == id);
 
             return ticket;
         }
 
+   
+
+        public async Task<IEnumerable<Tickets>> GetTickets()
+        {
+            var tickets = await _context.Tickets.ToListAsync();
+
+            return tickets;
+        }
+
+
+
+
+        // public async Task<IEnumerable<Tickets>> GetTickets(int userId, int id)
+        //{//            return await _context.Tickets.Where(u => u.ClientId == userId).FirstOrDefaultAsync(t => t.Id == id);
+
+        //    
+        //}
+
         public async Task<bool> SaveAll()
         {
            return await _context.SaveChangesAsync() > 0;
         }
+
+       
     }
 }

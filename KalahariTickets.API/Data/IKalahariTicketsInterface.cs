@@ -22,6 +22,10 @@ namespace KalahariTickets.API.Data
 
          Task<Tickets> GetTicket(int id);
 
+         Task<IEnumerable<Tickets>> GetTickets();
+
+        Task<List<Tickets>> GetOpenTicketsForClient(int id);
+
 
 
     }

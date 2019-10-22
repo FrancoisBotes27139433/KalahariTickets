@@ -36,6 +36,44 @@ namespace KalahariTickets.API.Controllers
             return Ok(ticketFromRepo);
         }
 
+        [HttpPost("GetOpenTickets")]
+        
+        public async Task<IActionResult> GetOpenTickets(int userId, TicketsForDetailedDto ticketsForDetailedDto)
+        {
+              if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var clientFromRepo = await _repo.GetClient(userId);
+
+            //if(!clientFromRepo.Tickets.Any(t => t.Id == id ))
+               // return Unauthorized();
+
+            var ticketFromRepo = await _repo.GetOpenTicketsForClient(userId);
+
+           //var ticketToReturn = _mapper.Map<Tickets>(ticketFromRepo);
+            
+             return Ok(ticketFromRepo);
+        }
+
+        [HttpPost("GetAllTickets")]
+        
+        public async Task<IActionResult> GetAllTickets(int userId, TicketsForDetailedDto ticketsForDetailedDto)
+        {
+              if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var clientFromRepo = await _repo.GetClient(userId);
+
+            //if(!clientFromRepo.Tickets.Any(t => t.Id == id ))
+               // return Unauthorized();
+
+            var ticketFromRepo = await _repo.GetTickets();
+
+           //var ticketToReturn = _mapper.Map<Tickets>(ticketFromRepo);
+            
+             return Ok(ticketFromRepo);
+        }
+
         [HttpPost]
          public async Task<IActionResult> AddTicketForClient(int userId, /*string title, string description,*/ [FromForm]TicketForCreationDto ticketForCreationDto)
          {
@@ -72,7 +110,7 @@ namespace KalahariTickets.API.Controllers
 
 
          [HttpPost("{id}/setUrgent")]
-         public async Task<IActionResult> setTicketUrgent(int userId, int id)
+         public async Task<IActionResult> SetTicketUrgent(int userId, int id)
          {
             if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized();
@@ -95,6 +133,32 @@ namespace KalahariTickets.API.Controllers
             return BadRequest("Could not set ticket to Urgrnt");
 
 
+
+
+         }
+
+         [HttpPost("{id}/setOpen")]
+         public async Task<IActionResult> SetTicketOpen(int userId, int id)
+         {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var clientFromRepo = await _repo.GetClient(userId);
+
+            if(!clientFromRepo.Tickets.Any(t => t.Id == id ))
+                return Unauthorized();
+
+            var ticketFromRepo = await _repo.GetTicket(id);
+
+            if(ticketFromRepo.Open)
+                return BadRequest("Ticket is already set as Open");
+
+            ticketFromRepo.Open = true;
+
+            if(await _repo.SaveAll())
+                return NoContent();
+
+            return BadRequest("Could not set ticket to Open");
 
 
          }
