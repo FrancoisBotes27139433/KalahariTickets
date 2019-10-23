@@ -18,7 +18,7 @@
                         <a class="nav-item white-text" [routerLink]="['/ticket']">Tickets</a>
                     </li>
                     <li>
-                        <a class="nav-item white-text" [routerLink]="['/client']">Clients</a>
+                        <a class="nav-item white-text" [routerLink]="['/client']" (ngSubmit)='loadClients()'>Clients</a>
                     </li>
                     <li>
                         <a class="nav-item white-text" [routerLink]="['/tech']">Technicians</a>
@@ -27,7 +27,7 @@
                         <a class="nav-item white-text" [routerLink]="['/report']">Report</a>
                     </li>
                     <li>
-                        <a class="nav-item red-text text-darken-2" (click)="logout()" [routerLink]="['/login']">Log out</a>
+                        <a class="nav-item red-text text-darken-2 right" (click)="logout()" [routerLink]="['/login']">Log out</a>
                     </li>
                 </div>
 

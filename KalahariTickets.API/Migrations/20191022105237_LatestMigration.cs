@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace KalahariTickets.API.Migrations
 {
-    public partial class ExtendedModels : Migration
+    public partial class LatestMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -69,7 +69,7 @@ namespace KalahariTickets.API.Migrations
                         column: x => x.TechnitionId,
                         principalTable: "Technitions",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(

@@ -7,7 +7,6 @@ import { AuthService } from '../_services/auth.service';
   styleUrls: ['./ticket.component.scss']
 })
 export class TicketComponent implements OnInit {
-
   model: any = {};
 
   constructor(private authService: AuthService) { }

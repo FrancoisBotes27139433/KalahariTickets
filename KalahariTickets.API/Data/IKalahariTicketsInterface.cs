@@ -20,6 +20,8 @@ namespace KalahariTickets.API.Data
 
          Task<Technition> GetTechnition(int id);
 
+         Task<Tickets> GetTicket(int id);
+
 
 
     }
