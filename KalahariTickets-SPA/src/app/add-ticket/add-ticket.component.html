@@ -1,14 +1,14 @@
 <h2>Add Ticket</h2>
 
-<!-- #addticketForm="ngForm" (ngSubmit)='addTicket()' -->
 <form #addticketForm="ngForm" (ngSubmit)='addTicket()'>
   <label>Title</label>
-  <input Title>
+  <input required name="Title" [(ngModel)]="model.title" Title>
   <label>Description</label>
-  <input Description>
-  <label>Complexity</label>
-  <input Complexity>
+  <input required name="Description" [(ngModel)]="model.description" Description>
+  <label>Urget</label>
+  <input name="Urgent" [(ngModel)]="model.isUrgent" IsUrgent>
   <label>Notes</label>
-  <input Notes>
-  <input class="green darken-4 btn" type="submit" value="Save">
+  <input required name="Notes" [(ngModel)]="model.notes" Notes>
+  <button [disabled]="!addticketForm.valid" class="green darken-4 btn mt-5" type="submit">Add Ticket</button>
+  <button class="amber darken-4 btn mt-5 ml-2" [routerLink]="['/client']">Cancel</button>
 </form>
