@@ -1,8 +1,73 @@
-<div>
-  Kalahari Tickets
-</div>
 
-<app-value></app-value>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kalahari Tickets</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="green darken-4">
+        <div class="nav-wrapper green darken-4 container">
+            <a class="brand-logo hide-on-med-and-down"><strong class="amber-text text-darken-2" [routerLink]="['/home']" > Kalahari Tickets </strong> </a>
+            <ul class="right amber-text text-darken-2">
+                <div *ngIf="loggedIn()">
+                    <li>
+                        <a class="nav-item white-text" [routerLink]="['/ticket']">Tickets</a>
+                    </li>
+                    <li>
+                        <a class="nav-item white-text" [routerLink]="['/client']">Clients</a>
+                    </li>
+                    <li>
+                        <a class="nav-item white-text" [routerLink]="['/tech']">Technicians</a>
+                    </li>
+                    <li>
+                        <a class="nav-item white-text" [routerLink]="['/report']">Report</a>
+                    </li>
+                    <li>
+                        <a class="nav-item red-text text-darken-2" (click)="logout()" [routerLink]="['/login']">Log out</a>
+                    </li>
+                </div>
+
+                <div *ngIf="!loggedIn()">
 
 
-
+                <li class="nav-item amber-text text-darken-2">
+                    <a class="nav-item amber-text text-darken-2" [routerLink]="['/login']">Log in</a>
+                </li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <main class="container">
+    </main>
+</body>
+<!-- <header class="navbar navbar-dark green darken-4">
+    <form #loginForm="ngForm" class="form-inline my-2 my-lg-0" (ngSubmit)="login()">
+        <div class="container">
+          <ng-template [ngIf]="loggedIn()">
+            <a routerLink="/home" class="center" style="font-size: 200%;">KalahariTickets</a>
+          </ng-template>
+          
+          <ng-template [ngIf]="!loggedIn()">
+              <a class="logo" style="font-size: 200%;">KalahariTickets</a>
+            </ng-template>
+        
+        
+        <nav>
+            <ul class="btn green green darken-4">
+              <li><a *ngIf="loggedIn()" href="#" routerLink="/ticket">Tickets</a></li>
+              <li *ngIf="loggedIn()"><a href="#" routerLink="/client">Clients</a></li>
+              <li *ngIf="loggedIn()"><a href="#" routerLink="/tech">Technicians</a></li>
+              <li *ngIf="!loggedIn()"><a href="#" routerLink="/login">Login</a></li>
+              <li *ngIf="loggedIn()"><a href="#" (click)="logout()" routerLink="/login">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </form>
+</header> -->
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
