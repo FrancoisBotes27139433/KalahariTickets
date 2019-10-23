@@ -45,7 +45,13 @@ namespace KalahariTickets.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                    b.Property<int>("Age");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<int>("MonthlySalary");
 
                     b.HasKey("Id");
 

@@ -24,6 +24,8 @@ namespace KalahariTickets.API.Models
 
          public  int ClientId { get; set; }
 
+        // public int OpenTicketCount { get; set; }
+
        // public  Technition Technition {get;set;}
         //public int TechnitionId { get; set; }
 
