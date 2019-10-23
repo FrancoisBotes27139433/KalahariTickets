@@ -47,25 +47,25 @@ namespace KalahariTickets.API.Controllers
 
         //[HttpPost("GetOpenTickets")]
 
-        [HttpGet]       
-        public async Task<IActionResult> GetOpenTickets(int userId, int id, TicketsForDetailedDto ticketsForDetailedDto)
+        [HttpGet("OpenTickets")]       
+        public async Task<IActionResult> GetOpenTickets(int userId, TicketsForDetailedDto ticketsForDetailedDto)
         {
             if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized();
 
             var clientFromRepo = await _repo.GetClient(userId);
 
-            if(!clientFromRepo.Tickets.Any(t => t.Id == id ))
-            return Unauthorized();
+            //if(!clientFromRepo.Tickets.Any(t => t.Id == id ))
+                //return Unauthorized();
 
             var ticketFromRepo = await _repo.GetOpenTicketsForClient(userId);
 
-            //var ticketToReturn = _mapper.Map<Tickets>(ticketFromRepo);
+            var ticketToReturn = _mapper.Map<Tickets>(ticketFromRepo);
 
-            return Ok(ticketFromRepo);
+            return Ok(ticketToReturn);
         }
 
-        [HttpPost("GetAllTickets")]
+        [HttpGet]
 
         public async Task<IActionResult> GetAllTickets(int userId, TicketsForDetailedDto ticketsForDetailedDto)
         {

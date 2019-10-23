@@ -104,7 +104,7 @@ namespace KalahariTickets.API.Data
 
         public async Task<List<Tickets>> GetOpenTicketsForClient(int userId)
         {
-            return await _context.Tickets.Where(u => u.ClientId == userId).ToListAsync();
+            return await _context.Tickets.Where(u => u.ClientId == userId && u.Open == true).ToListAsync();
         }
 
         public async Task<Technition> GetTechnition(int id)
