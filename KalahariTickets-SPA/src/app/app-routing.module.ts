@@ -23,7 +23,7 @@ const routes: Routes = [
     { path: 'addclient', component: AddClientComponent},
     { path: 'openticket', component: OpenTicketComponent},
     { path: 'editticket', component: EditTicketComponent},
-    { path: 'addticket', component: AddTicketComponent},
+    { path: 'addticket/:id', component: AddTicketComponent},
     { path: 'client/:id', component: OpenClientComponent}
   ];
 

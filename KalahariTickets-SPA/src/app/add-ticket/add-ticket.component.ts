@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
 import { TicketService } from '../_services/ticket.service';
+import { ActivatedRoute } from '@angular/router';
+import { Tickets } from '../_model/tickets';
 
 @Component({
   selector: 'app-add-ticket',
@@ -9,15 +11,16 @@ import { TicketService } from '../_services/ticket.service';
 })
 export class AddTicketComponent implements OnInit {
   model: any = {};
+  ticket: Tickets;
 
-  constructor(private ticketService: TicketService) { }
+  constructor(private ticketService: TicketService, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
-  // addTicket(id) {
-  //   this.ticketService.addticket(this.model , id).subscribe(() => {
-  //     console.log('ticket added');
-  //   });
-  // }
+  addTicket() {
+    this.ticketService.addTicket(this.model, this.route.snapshot.params.id).subscribe((ticket: Tickets) => {
+      this.ticket = ticket;
+    });
+  }
 }

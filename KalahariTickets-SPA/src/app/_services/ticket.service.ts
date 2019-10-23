@@ -27,5 +27,8 @@ export class TicketService {
     return this.http.get<Tickets>(this.baseUrl + 'tickets/' + id);
   }
 
-
+  addTicket(model: any, id: number) {
+    return this.http.post(this.baseUrl + 'clients/' + id + 'tickets', model);
+  }
 }
+

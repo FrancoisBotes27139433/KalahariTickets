@@ -41,6 +41,9 @@ header nav ul li a:hover {
 h1 {
     margin-top: 2em;
 }
+p{
+  text-transform: uppercase;
+}
 
 
 .materialize-red {

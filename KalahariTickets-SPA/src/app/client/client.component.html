@@ -28,7 +28,7 @@
                 <p>Open Tickets: {{client.tickets}}</p>
             </div>
             <div class="card-action">
-                <a [routerLink]="['/addticket']">Add Ticket</a>
+                <a [routerLink]="['/addticket', client.id]">Add Ticket</a>
                 <a [routerLink]="['/client/', client.id]">Open</a>
             </div>
         </div>
