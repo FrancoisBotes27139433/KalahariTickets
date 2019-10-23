@@ -6,7 +6,7 @@ namespace KalahariTickets.API.Dtos
 {
     public class ClientForRegisterDto
     {
-        public int Id{ get; set; }
+      //  public int Id{ get; set; }
 
         [Required]
         public string Username { get; set; }
