@@ -1,11 +1,11 @@
 import { Tickets } from './tickets';
 
 export interface Client {
-    id: any;
+    id: number;
     username: string;
-    phone: any;
-    email: any;
+    phoneNumber: number;
+    email: string;
     dateAdded: Date;
-    address: any;
-    tickets?: Tickets[];
+    address: string;
+    tickets: Tickets[];
 }

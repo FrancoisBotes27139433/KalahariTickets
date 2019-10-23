@@ -6,11 +6,11 @@
   <label>Password</label>
   <input required name="Password" [(ngModel)]="model.password" Password>
   <label>Phone Number</label>
-  <input required name="Password" [(ngModel)]="model.phoneNumber" PhoneNumber>
+  <input required name="phoneNumber" [(ngModel)]="model.phoneNumber" PhoneNumber>
   <label>Email Address</label>
-  <input required name="Password" [(ngModel)]="model.emailAddress" EmailAddress>
+  <input required name="emailAddress" [(ngModel)]="model.emailAddress" EmailAddress>
   <label>Address</label>
-  <input required name="Password" [(ngModel)]="model.address" Address>
+  <input required name="address" [(ngModel)]="model.address" Address>
   <button [disabled]="!registerForm.valid" class="green darken-4 btn mt-5" type="submit">Add Client</button>
   <button class="amber darken-4 btn mt-5 ml-2" (click)='cancel()' [routerLink]="['/client']" >Cancel</button>
 </form>
