@@ -1,13 +1,16 @@
 <h1>Map</h1>
 <agm-map appDirectionsMap [showDirection]="this.displayDirections"
          [destination]="destination"
+         
 
          [zoom]="zoom"
          [disableDefaultUI]="false"
          [zoomControl]="false">
 
-    
+         
     <agm-marker
+    [animation]="'BOUNCE'"
+
             [latitude]="destination.latitude"
             [longitude]="destination.longitude">
     </agm-marker>
