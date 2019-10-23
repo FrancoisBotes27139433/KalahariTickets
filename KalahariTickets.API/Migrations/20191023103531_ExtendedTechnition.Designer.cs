@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KalahariTickets.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191022105237_LatestMigration")]
-    partial class LatestMigration
+    [Migration("20191023103531_ExtendedTechnition")]
+    partial class ExtendedTechnition
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -47,7 +47,13 @@ namespace KalahariTickets.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name");
+                    b.Property<int>("Age");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<int>("MonthlySalary");
 
                     b.HasKey("Id");
 
