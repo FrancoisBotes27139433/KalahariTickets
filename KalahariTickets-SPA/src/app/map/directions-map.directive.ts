@@ -1,7 +1,7 @@
 import { Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {GoogleMapsAPIWrapper} from '@agm/core';
 import {Directive} from '@angular/core';
-import {MapComponent} from './map.component'
+
 
 // You can use any other interface for origin and destination, but it must contain latlng data
 export interface ILatLng {
