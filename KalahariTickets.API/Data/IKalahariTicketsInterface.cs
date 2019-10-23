@@ -12,6 +12,8 @@ namespace KalahariTickets.API.Data
 
          Task<bool> SaveAll();
 
+         Task<Technition> AddTechnition(Technition technition);
+
          Task<IEnumerable<Client>> GetClients();
 
          Task<Client> GetClient(int id);
@@ -24,7 +26,9 @@ namespace KalahariTickets.API.Data
 
          Task<IEnumerable<Tickets>> GetTickets();
 
-        Task<List<Tickets>> GetOpenTicketsForClient(int id);
+        Task<List<Tickets>> GetOpenTicketsForClient(int userId);
+
+        Task<bool> TechnitionExists(string firstName);
 
 
 
