@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -60,7 +61,7 @@ namespace KalahariTickets.API.Controllers
 
             var ticketFromRepo = await _repo.GetOpenTicketsForClient(userId);
 
-            var ticketToReturn = _mapper.Map<Tickets>(ticketFromRepo);
+            var ticketToReturn = _mapper.Map<IEnumerable<TicketsForDetailedDto>>(ticketFromRepo);
 
             return Ok(ticketToReturn);
         }
@@ -79,9 +80,9 @@ namespace KalahariTickets.API.Controllers
 
             var ticketFromRepo = await _repo.GetTickets();
 
-            //var ticketToReturn = _mapper.Map<Tickets>(ticketFromRepo);
+            var  ticketToReturn = _mapper.Map<IEnumerable<TicketsForDetailedDto>>(ticketFromRepo);
 
-            return Ok(ticketFromRepo);
+            return Ok(ticketToReturn);
         }
 
         [HttpPost]

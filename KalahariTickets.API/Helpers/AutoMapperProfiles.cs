@@ -14,17 +14,18 @@ namespace KalahariTickets.API.Helpers
             CreateMap<ClientForUpdateDto, Client>();
             CreateMap<Tickets, TicketsForDetailedDto>();
             CreateMap<TicketForCreationDto, Tickets>();
+            CreateMap<TicketsForDetailedDto, Tickets>();
            // CreateMap<TicketsForDetailedDto, Tickets>();
             CreateMap<Technition, TechnitionForListDto>();
             CreateMap<TechnitionForListDto, Technition>();
             CreateMap<TechnitionForRegisterDto, Technition>();
 
-            CreateMap<TicketsForDetailedDto, Tickets>().ForMember(src => src.Notes, opt => opt.Ignore())
+           /* CreateMap<TicketsForDetailedDto, Tickets>().ForMember(src => src.Notes, opt => opt.Ignore())
                 .ForMember(src => src.Description, opt => opt.Ignore())
                 .ForMember(src => src.DateClossed, opt => opt.Ignore())
                 .ForMember(src => src.DateIssued, opt => opt.Ignore())
                 .ForMember(src => src.IsUrgent, opt => opt.Ignore())
-                .ForMember(src => src.Title, opt => opt.Ignore());
+                .ForMember(src => src.Title, opt => opt.Ignore());*/
                         
         }
     }

@@ -27,7 +27,32 @@ namespace KalahariTickets.API.Controllers
 
         [HttpPost("register")]
 
-        public async Task<IActionResult> Register(ClientForRegisterDto clientForRegisterDto)
+         public async Task<IActionResult> Register(ClientForRegisterDto clientForRegisterDto)
+        {
+            // validate reguest 
+
+            clientForRegisterDto.Username = clientForRegisterDto.Username.ToLower();
+
+            if (await _repo.UserExists(clientForRegisterDto.Username))
+                return BadRequest("Username already exists");
+
+            var clientToCreate = new Client
+            {
+                Username = clientForRegisterDto.Username,
+                PhoneNumber = clientForRegisterDto.PhoneNumber,
+                Email = clientForRegisterDto.Email,
+                DateAdded = DateTime.Now,
+                Address = clientForRegisterDto.Address
+
+            };
+
+            var createdClient = await _repo.Register(clientToCreate, clientForRegisterDto.Password);
+
+            return StatusCode(201);
+        }
+
+
+        /*public async Task<IActionResult> Register(ClientForRegisterDto clientForRegisterDto)
         {
             // validate reguest 
 
@@ -44,7 +69,7 @@ namespace KalahariTickets.API.Controllers
             var createdClient = await _repo.Register(clientToCreate, clientForRegisterDto.Password);
 
             return StatusCode(201);
-        }
+        }*/
 
         [HttpPost("login")]
 
