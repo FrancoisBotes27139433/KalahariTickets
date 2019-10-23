@@ -1,0 +1,60 @@
+<!-- @if (Model.Ticket.IsUrgent) {
+  <h3 class="center red black-text">URGENT</h3>
+} -->
+
+<h3>Ticket Details</h3>
+<p>
+  Complexity: Complexity <br>
+  Date Added: DateAdded <br>
+  Status: Open or Closed <br>
+  Description: Description <br>
+  Notes: Notes <br>
+  <a [routerLink]="['/editticket']" >Edit</a>
+</p>
+
+<!-- @if (User.IsInRole(DataConstants.AdministratorRole)) {
+  <form asp-action="ToggleUrgent" asp-route-id="@Model.Ticket.Id" method="post">
+      <input class="green darken-4 btn" type="submit" value="Toggle Urgent">
+  </form>
+  } -->
+
+  <h3>Client Details</h3>
+<p>
+    Name: FirstName LastName <br>
+    Company: Company <br>
+    Phone: PhoneNumber <br>
+    Email: EmailAddress <br>
+    <a [routerLink]="['/routePath']" >More Information</a>
+</p>
+
+<h3>Technician Time: Calculate Time</h3>
+
+  <a [routerLink]="['/addtime']" >Add Time</a>
+
+
+  <table>
+    <tr>
+        <th>Technician</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Time</th>
+        <!-- @if (User.IsInRole(DataConstants.AdministratorRole)) {
+        <th></th>
+        } -->
+    </tr>
+    <!-- @foreach (var time in Model.Times) {
+    <tr>
+        <th>@time.Technician.FirstName @time.Technician.LastName</th>
+        <th>@time.Time.Start</th>
+        <th>@time.Time.End</th>
+        <th>@((time.Time.End - time.Time.Start).ToString("h\\:mm"))</th>
+        @if (User.IsInRole(DataConstants.AdministratorRole)) {
+        <th>
+            <form asp-action="DeleteTime" asp-route-id="@time.Time.Id" method="post">
+                <input type="submit" value="Delete">
+            </form>
+        </th>
+        }
+    </tr>
+    } -->
+</table>

@@ -20,7 +20,7 @@ namespace KalahariTickets.API.Models
 
         public string Address { get; set; }
 
-        public IEnumerable<Tickets> Tickets { get; set; }
+        public  ICollection<Tickets> Tickets { get; set; }
 
       //  public bool IsAdmin { get; set; }
 

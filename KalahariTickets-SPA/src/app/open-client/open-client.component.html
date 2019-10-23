@@ -1,0 +1,35 @@
+<h1>Client Name</h1>
+
+<h3>Client Details</h3>
+<p>
+    Name: FirstName LastName <br>
+    Company: Company <br>
+    Phone: PhoneNumber <br>
+    Email: EmailAddress <br>
+    Address: Address <br>
+    Date Added: Date
+</p>
+
+<h3>Open Tickets: OpenTicketCount</h3>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Date Added</th>
+        <th>Urgent</th>
+    </tr>
+    <!-- @foreach (var ticket in Model.Tickets) {
+    <tr>
+        <th>
+            <a asp-action="Open" asp-controller="Tickets" asp-route-id="@ticket.Id">@ticket.Title</a>
+        </th>
+        <th>@ticket.DateAdded.ToString("d")</th>
+        @if (ticket.IsUrgent) {
+        <th>&#10004;</th>
+        }
+        else
+        {
+        <th></th>
+        }
+    </tr>
+    } -->
+</table>

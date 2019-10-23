@@ -28,6 +28,8 @@ namespace KalahariTickets.API.Data
         {
            var client = await _context.Clients.Include(t => t.Tickets).FirstOrDefaultAsync(c => c.Id == id);
 
+           /*.Include(t => t.Tickets)*/
+
            return client;
 
            // var client = await _context.Clients.FirstOrDefaultAsync(c => c.Id == id);
@@ -38,6 +40,8 @@ namespace KalahariTickets.API.Data
         public async Task<IEnumerable<Client>> GetClients()
         {
             var clients = await _context.Clients.Include(t => t.Tickets).ToListAsync();
+
+            /*.Include(t => t.Tickets)*/
 
             return clients;
 
@@ -50,6 +54,8 @@ namespace KalahariTickets.API.Data
         {
            var technition = await _context.Technitions.Include(t => t.Tickets).FirstOrDefaultAsync(c => c.Id == id);
 
+           /*.Include(t => t.Tickets)*/
+
            return technition;
         }
 
@@ -57,7 +63,16 @@ namespace KalahariTickets.API.Data
         {
             var technitions = await _context.Technitions.Include(t => t.Tickets).ToListAsync();
 
+            /*.Include(t => t.Tickets)*/
+
             return technitions;
+        }
+
+        public async  Task<Tickets> GetTicket(int id)
+        {
+            var ticket = await _context.Tickets.FirstOrDefaultAsync(t => t.Id == id);
+
+            return ticket;
         }
 
         public async Task<bool> SaveAll()
