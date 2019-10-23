@@ -17,7 +17,7 @@ export class OpenClientComponent implements OnInit {
   }
 
   loadClient() {
-    this.clientService.getClient(+this.route.snapshot.params['id']).subscribe((client: Client) => {
+    this.clientService.getClient(this.route.snapshot.params.id).subscribe((client: Client) => {
       this.client = client;
     });
   }

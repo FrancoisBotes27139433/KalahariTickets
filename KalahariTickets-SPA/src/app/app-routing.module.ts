@@ -21,10 +21,10 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'login', component: LoginComponent},
     { path: 'addclient', component: AddClientComponent},
-    { path: 'openticket', component : OpenTicketComponent},
-    { path: 'editticket', component : EditTicketComponent},
-    { path: 'addticket', component : AddTicketComponent},
-    { path: 'openclient/:id', component: OpenClientComponent}
+    { path: 'openticket', component: OpenTicketComponent},
+    { path: 'editticket', component: EditTicketComponent},
+    { path: 'addticket', component: AddTicketComponent},
+    { path: 'client/:id', component: OpenClientComponent}
   ];
 
 @NgModule({

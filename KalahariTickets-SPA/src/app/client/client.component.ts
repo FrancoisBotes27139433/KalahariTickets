@@ -11,7 +11,6 @@ import { TicketService } from '../_services/ticket.service';
 })
 export class ClientComponent implements OnInit {
   clients: Client[];
-  tickets: Tickets[];
 
   constructor(private clientService: ClientService, private ticketService: TicketService) { }
 
