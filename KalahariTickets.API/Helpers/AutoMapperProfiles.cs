@@ -15,6 +15,9 @@ namespace KalahariTickets.API.Helpers
             CreateMap<Tickets, TicketsForDetailedDto>();
             CreateMap<TicketForCreationDto, Tickets>();
            // CreateMap<TicketsForDetailedDto, Tickets>();
+            CreateMap<Technition, TechnitionForListDto>();
+            CreateMap<TechnitionForListDto, Technition>();
+            CreateMap<TechnitionForRegisterDto, Technition>();
 
             CreateMap<TicketsForDetailedDto, Tickets>().ForMember(src => src.Notes, opt => opt.Ignore())
                 .ForMember(src => src.Description, opt => opt.Ignore())

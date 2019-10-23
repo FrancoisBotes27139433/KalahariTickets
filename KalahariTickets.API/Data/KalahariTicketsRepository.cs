@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using KalahariTickets.API.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,6 +21,55 @@ namespace KalahariTickets.API.Data
         {
             _context.Add(entity);
         }
+
+        public async Task<Technition> AddTechnition(Technition technition)
+        {
+
+       
+
+            await _context.Technitions.AddAsync(technition);
+            await _context.SaveChangesAsync();
+
+            return technition;
+        }
+
+        // public Task<Technition> AddTechnition(tech)
+        // {
+        //    
+        //
+
+        // await _context.Clients.AddAsync(client);
+        //await _context.SaveChangesAsync();
+
+        //return client;
+
+
+        //}
+
+        /// public Task<Technition> AddTechnition(Technition technition)
+        // {
+        ///technition.Age = 
+
+
+        // await _context.Clients.AddAsync(client);
+        //            await _context.SaveChangesAsync();
+
+        //  return client;
+
+        //public Task<Technition> AddTechnition(Technition technition)
+        //{
+        //     
+
+        //client.PasswordHash = passwordHash;
+        // client.PasswordSalt = passwordSalt;
+
+        //await _context.Clients.AddAsync(client);
+        //await _context.SaveChangesAsync();
+
+        // return client;
+        // }
+
+        //}
 
         public void Delete<T>(T entity) where T : class
         {
@@ -105,6 +155,12 @@ namespace KalahariTickets.API.Data
            return await _context.SaveChangesAsync() > 0;
         }
 
-       
+        public async Task<bool> TechnitionExists(string firstName)
+        {
+           if(await _context.Technitions.AnyAsync(x => x.FirstName == firstName))
+                return true;
+
+            return false;
+        }
     }
 }
