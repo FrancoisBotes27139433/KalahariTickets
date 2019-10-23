@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from '../_model/client';
 import { ClientService } from '../_services/client.service';
+import { Tickets } from '../_model/tickets';
+import { TicketService } from '../_services/ticket.service';
 
 @Component({
   selector: 'app-client',
@@ -9,8 +11,9 @@ import { ClientService } from '../_services/client.service';
 })
 export class ClientComponent implements OnInit {
   clients: Client[];
+  tickets: Tickets[];
 
-  constructor(private clientService: ClientService) { }
+  constructor(private clientService: ClientService, private ticketService: TicketService) { }
 
   ngOnInit() {
     this.loadClients();

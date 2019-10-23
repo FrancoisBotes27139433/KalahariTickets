@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientService } from '../_services/client.service';
+import { Client } from '../_model/client';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-open-client',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./open-client.component.css']
 })
 export class OpenClientComponent implements OnInit {
-
-  constructor() { }
+  client: Client;
+  constructor(private clientService: ClientService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.loadClient();
+  }
+
+  loadClient() {
+    this.clientService.getClient(+this.route.snapshot.params['id']).subscribe((client: Client) => {
+      this.client = client;
+    });
   }
 
 }

@@ -3,6 +3,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Tickets } from '../_model/tickets';
 import { Observable } from 'rxjs';
+import { identifierModuleUrl } from '@angular/compiler';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -19,11 +20,12 @@ export class TicketService {
   constructor(private http: HttpClient) { }
 
   getTickets(): Observable<Tickets[]> {
-    return this.http.get<Tickets[]>(this.baseUrl + 'tickets', httpOptions);
+    return this.http.get<Tickets[]>(this.baseUrl + 'tickets');
   }
 
   getTicket(id): Observable<Tickets> {
-    return this.http.get<Tickets>(this.baseUrl + 'tickets/' + id, httpOptions);
+    return this.http.get<Tickets>(this.baseUrl + 'tickets/' + id);
   }
+
 
 }

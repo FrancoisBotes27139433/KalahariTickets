@@ -23,16 +23,15 @@
     <div class="col s11 m5">
         <div class="card green darken-4 stickey-action hoverable">
             <div class="card-content white-text activator">
-                <span class="card-title">{{client.id}}</span>
-                <p>{{client.username}}</p><br>
+                <span class="card-title"> Client ID : {{client.id}}</span>
+                <p>Username: {{client.username}}</p><br>
                 <p>Open Tickets: {{client.tickets}}</p>
             </div>
             <div class="card-action">
                 <a [routerLink]="['/addticket']">Add Ticket</a>
-                <a [routerLink]="['/openclient']">Open</a>
+                <a [routerLink]="['/openclient/, client.id']">Open</a>
             </div>
         </div>
     </div>
   </div>
-</div>
 

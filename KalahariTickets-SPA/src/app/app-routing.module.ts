@@ -24,7 +24,7 @@ const routes: Routes = [
     { path: 'openticket', component : OpenTicketComponent},
     { path: 'editticket', component : EditTicketComponent},
     { path: 'addticket', component : AddTicketComponent},
-    { path: 'openclient', component: OpenClientComponent}
+    { path: 'openclient/:id', component: OpenClientComponent}
   ];
 
 @NgModule({

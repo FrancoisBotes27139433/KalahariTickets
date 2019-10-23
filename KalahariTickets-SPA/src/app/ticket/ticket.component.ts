@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
+import { TicketService } from '../_services/ticket.service';
+import { Tickets } from '../_model/tickets';
 
 @Component({
   selector: 'app-ticket',
@@ -7,11 +9,17 @@ import { AuthService } from '../_services/auth.service';
   styleUrls: ['./ticket.component.scss']
 })
 export class TicketComponent implements OnInit {
-  model: any = {};
+  ticket: Tickets[];
 
-  constructor(private authService: AuthService) { }
+  constructor(private ticketService: TicketService) { }
 
   ngOnInit() {
+    this.loadTickets();
   }
 
+  loadTickets() {
+    this.ticketService.getTickets().subscribe((ticket: Tickets[]) => {
+      this.ticket = ticket;
+    });
+  }
 }

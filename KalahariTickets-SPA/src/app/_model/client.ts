@@ -2,7 +2,7 @@ import { Tickets } from './tickets';
 
 export interface Client {
     id: any;
-    username: any;
+    username: string;
     phone: any;
     email: any;
     dateAdded: Date;

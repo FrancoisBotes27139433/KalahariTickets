@@ -1,21 +1,36 @@
 <h2>All Tickets</h2>
 
+
 <div class="col s12 m6 l3">
-  <div class="card stickey-action green darken-4 hoverable activato">
-      <div class="card-content white-text">
-          <span class="card-title amber-text text-darken-2">Title</span>
-          <i class="small material-icons right">U</i>
-          <p>Description</p><br>
-          <p>This ticket is open</p><br>
-          <p>Date</p><br>
+        <div class="card stickey-action green darken-4 hoverable activato">
+            <div class="card-content white-text">
+                <span class="card-title amber-text text-darken-2"></span>
+                <!-- <i class="small material-icons right"></i> -->
+                <p>Description : </p><br>
+                <p>This ticket is open</p><br>
+                <p>Date: </p><br>
+            </div>
+      
+            <div class="card-action white-text accent-4">
+                <a [routerLink]="['/openticket']" >Open</a>
+            </div>
+        </div>
       </div>
 
-      <div class="card-reveal">
-          <span class="card-title amber-text text-darken-2">@ticket.Title<i class="material-icons right">close</i></span>
-          <p>@ticket.Notes</p>
-      </div>
-      <div class="card-action white-text accent-4">
-          <a [routerLink]="['/openticket']" >Open</a>
-      </div>
-  </div>
+<div *ngFor="let ticket of ticket">
+    <div class="col s12 m6 l3">
+    <div class="card stickey-action green darken-4 hoverable activato">
+        <div class="card-content white-text">
+            <span class="card-title amber-text text-darken-2">{{ticket.title}}</span>
+            <!-- <i class="small material-icons right"></i> -->
+            <p>Description : {{ticket.notes}}</p><br>
+            <p>This ticket {{ticket.open}}</p><br>
+            <p>Date: {{ticket.dateIssue}}</p><br>
+        </div>
+
+        <div class="card-action white-text accent-4">
+            <a [routerLink]="['/openticket']" >Open</a>
+        </div>
+    </div>
+</div>
 </div>
