@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
@@ -86,7 +87,7 @@ namespace KalahariTickets.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddTicketForClient(int userId, /*string title, string description,*/ [FromForm]TicketForCreationDto ticketForCreationDto)
+        public async Task<IActionResult> AddTicketForClient(int userId, /*string title, string description, [FromForm]*/TicketForCreationDto ticketForCreationDto)
         {
             if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized();
@@ -100,9 +101,24 @@ namespace KalahariTickets.API.Controllers
 
            };*/
 
+            var ticketToCreate = new Tickets
+            {
+                Title = ticketForCreationDto.Title,
+                Description = ticketForCreationDto.Description,
+               // DateIssued = DateTime.Now,
+                //DateClossed = 
+
+               // Username = clientForRegisterDto.Username,
+                //PhoneNumber = clientForRegisterDto.PhoneNumber,
+                //Email = clientForRegisterDto.Email,
+                //DateAdded = DateTime.Now,
+                //Address = clientForRegisterDto.Address
+
+            };
 
 
-            var ticket = _mapper.Map<Tickets>(ticketForCreationDto);
+
+            var ticket = _mapper.Map<Tickets>(ticketToCreate);
 
             clientFromRepo.Tickets.Add(ticket);
 

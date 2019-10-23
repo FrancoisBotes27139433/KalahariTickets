@@ -22,9 +22,10 @@ namespace KalahariTickets.API.Dtos
         public TicketForCreationDto()
         {
             DateIssued = DateTime.Now;
+            //DateClossed = 
             IsUrgent = false;
             Open = false;
-            Notes = "";
+           // Notes = "";
             //TechnitionId = null;
         }
 
