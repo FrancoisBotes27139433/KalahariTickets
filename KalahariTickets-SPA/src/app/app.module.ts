@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
@@ -14,6 +15,8 @@ import { TechnicianComponent } from './technician/technician.component';
 import { AppRoutingModule} from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { MapComponent } from './map/map.component';
+import { DirectionsMapDirective } from './map/directions-map.directive';
 
 
 
@@ -27,14 +30,19 @@ import { HomeComponent } from './home/home.component';
       TicketComponent,
       TechnicianComponent,
       LoginComponent,
-      HomeComponent
+      HomeComponent,
+      MapComponent,
+      DirectionsMapDirective
    ],
    imports: [
       BrowserModule,
       HttpClientModule,
       FormsModule,
       RouterModule,
-      AppRoutingModule
+      AppRoutingModule,
+      AgmCoreModule.forRoot({
+         apiKey: 'AIzaSyAorO1PoQngwMQGg1qmA2q7qHCZmyC85qE'
+       })
    ],
    providers: [
       AuthService
@@ -44,3 +52,4 @@ import { HomeComponent } from './home/home.component';
    ]
 })
 export class AppModule { }
+
