@@ -10,6 +10,8 @@ export class AppComponent {
   constructor(private authService: AuthService) { }
   title = 'KalahariTickets';
   model: any = {};
+  lat = 51.678418;
+  lng = 7.809007;
 
   login() {
     this.authService.login(this.model).subscribe(next => {

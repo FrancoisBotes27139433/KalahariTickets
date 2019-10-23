@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "FilePath": "c:\\Users\\gerri\\Documents\\NWU\\ITRW324\\ProjectNew2\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
+=======
   "FilePath": "d:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
+>>>>>>> master
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
