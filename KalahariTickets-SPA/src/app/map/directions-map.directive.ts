@@ -1,7 +1,9 @@
 import { Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {GoogleMapsAPIWrapper} from '@agm/core';
 import {Directive} from '@angular/core';
-import {MapComponent} from './map.component'
+import { GeocodeService } from '../_services/Geocode.service';
+
+
 
 // You can use any other interface for origin and destination, but it must contain latlng data
 export interface ILatLng {
@@ -21,9 +23,8 @@ declare var google: any;
 
 export class DirectionsMapDirective implements OnInit {
   @Input() origin: ILatLng;
-  @Input() destination: ILatLng;
+  @Input() destination: Location;
   @Input() showDirection: boolean;
-
 
   
   // We'll keep a single google maps directions renderer instance so we get to reuse it.
@@ -36,12 +37,14 @@ export class DirectionsMapDirective implements OnInit {
   ngOnInit() {
     navigator.geolocation.getCurrentPosition( pos => {
         this.origin = pos.coords;
-        console.log(this.origin);
         this.drawDirectionsRoute();
       });
-    console.log(this.origin);
+  
+    
     
   }
+
+  
 
   drawDirectionsRoute() {
       this.gmapsApi.getNativeMap().then(map => {
@@ -57,7 +60,7 @@ export class DirectionsMapDirective implements OnInit {
             directionsRenderer.setMap(map);
             directionsService.route({
                 origin: {lat: this.origin.latitude, lng: this.origin.longitude},
-                destination: {lat: this.destination.latitude, lng: this.destination.longitude},
+                destination: {lat: this.destination, lng: this.destination},
                 waypoints: [],
                 optimizeWaypoints: true,
                 travelMode: 'DRIVING'

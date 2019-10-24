@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "FilePath": "d:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
+=======
+  "FilePath": "c:\\Users\\gerri\\Documents\\NWU\\ITRW324\\ProjectNew2\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
+>>>>>>> GoogleMaps
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
