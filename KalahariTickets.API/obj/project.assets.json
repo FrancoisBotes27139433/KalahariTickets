@@ -12281,7 +12281,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\gerri\\Documents\\NWU\\ITRW324\\ProjectNew2\\KalahariTickets\\KalahariTickets.API\\obj\\KalahariTickets.API.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file D:\\OneDrive\\Universiteit Klasse\\Vierdejaar\\324\\KalahariTickets\\KalahariTickets.API\\obj\\KalahariTickets.API.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }

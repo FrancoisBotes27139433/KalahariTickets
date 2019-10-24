@@ -8,21 +8,20 @@ import { Location } from '../_model/location';
     templateUrl: './map.component.html',
     styleUrls: ['./map.component.css']
 })
-export class MapComponent{
+export class MapComponent implements OnInit {
   constructor() {
   }
-location: Location 
+  location: Location ;
 
-  destination: ILatLng = location= {
-    latitude: -26.69,
-    longitude: 27.09
-  };
+  // destination: ILatLng = location = {
+  //   latitude: -26.69,
+  //   longitude: 27.09
+  // };
   displayDirections = true;
   zoom = 14;
   ngOnInit() {
-      console.log(this.location)
-    //const ob = this.geo.getLatLan("11 Hoffman St, Potchefstroom, 2520, South Africa");
-    //console.log(ob.coords.latitude);
+      console.log(this.location);
+    // const ob = this.geo.getLatLan("11 Hoffman St, Potchefstroom, 2520, South Africa");
+    // console.log(ob.coords.latitude);
   }
-  
 }

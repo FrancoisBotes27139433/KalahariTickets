@@ -1,16 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-<<<<<<< HEAD
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
-=======
 
 
-import { AgmCoreModule } from '@agm/core';
-import { HttpClientModule} from '@angular/common/http';
-import { FormsModule} from '@angular/forms';
->>>>>>> GoogleMaps
+
 import { JwtModule } from '@auth0/angular-jwt';
 
 import { AppComponent } from './app.component';
@@ -31,11 +26,8 @@ import { OpenTicketComponent } from './open-ticket/open-ticket.component';
 import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { OpenClientComponent } from './open-client/open-client.component';
-<<<<<<< HEAD
 import { RegisterComponent } from './register/register.component';
-=======
 import { GeocodeService } from './_services/geocode.service';
->>>>>>> GoogleMaps
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -57,12 +49,9 @@ export function tokenGetter() {
       OpenTicketComponent,
       EditTicketComponent,
       AddTicketComponent,
-<<<<<<< HEAD
       OpenClientComponent,
       RegisterComponent
-=======
-      OpenClientComponent
->>>>>>> GoogleMaps
+
    ],
    imports: [
       BrowserModule,
@@ -71,27 +60,15 @@ export function tokenGetter() {
       RouterModule,
       AppRoutingModule,
       AgmCoreModule.forRoot({
-<<<<<<< HEAD
-         apiKey: 'AIzaSyAor01PoQngwMQGg1qmA2q7qHCZmX85qE'
+         apiKey: 'AIzaSyAorO1PoQngwMQGg1qmA2q7qHCZmyC85qE'
       }),
       JwtModule.forRoot({
-         config: {
-           tokenGetter,
-           whitelistedDomains: ['localhost:5000'],
-           blacklistedRoutes: ['localhost:5000/api/auth']
-         }
-       })
-=======
-         apiKey: 'AIzaSyAorO1PoQngwMQGg1qmA2q7qHCZmyC85qE'}),
-         JwtModule.forRoot({
             config: {
               tokenGetter,
               whitelistedDomains: ['localhost:5000'],
               blacklistedRoutes: ['localhost:5000/api/auth']
             }
           })
-      
->>>>>>> GoogleMaps
    ],
    providers: [
       AuthService,
