@@ -25,6 +25,7 @@ import { OpenTicketComponent } from './open-ticket/open-ticket.component';
 import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { OpenClientComponent } from './open-client/open-client.component';
+import { GeocodeService } from './_services/geocode.service';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -66,7 +67,8 @@ export function tokenGetter() {
       
    ],
    providers: [
-      AuthService
+      AuthService,
+      GeocodeService
    ],
    bootstrap: [
       AppComponent
