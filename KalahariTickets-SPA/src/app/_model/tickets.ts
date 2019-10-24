@@ -4,7 +4,7 @@ export interface Tickets {
     description: string;
     isUrgent: boolean;
     notes: string;
-    dateIssue: Date;
+    dateIssued: Date;
     dateClosed: Date;
     open: boolean;
     clientId: number;

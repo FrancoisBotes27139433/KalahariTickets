@@ -19,7 +19,7 @@ export class TicketComponent implements OnInit {
   }
 
   loadTickets() {
-    this.ticketService.getTickets(this.route.snapshot.params.id).subscribe((ticket: Tickets[]) => {
+    this.ticketService.getTickets().subscribe((ticket: Tickets[]) => {
       this.ticket = ticket;
     });
   }

@@ -20,17 +20,17 @@
 
   <h3>Client Details</h3>
 <p>
-    Name: FirstName LastName <br>
-    Company: Company <br>
-    Phone: PhoneNumber <br>
-    Email: EmailAddress <br>
-    <a [routerLink]="['/routePath']">More Information</a>
+    Username: {{client?.username}} <br>
+
+    Phone: {{client?.phoneNumber}} <br>
+    Email: {{client?.email}} <br>
+    Address: {{client?.address}} <br>
+    <!-- <a [routerLink]="['/routePath']">More Information</a> -->
 </p>
 
 <h3>Technician Time: Calculate Time</h3>
 
   <a [routerLink]="['/addtime']" >Add Time</a>
-
 
   <table>
     <tr>
