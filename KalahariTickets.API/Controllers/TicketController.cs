@@ -191,5 +191,29 @@ namespace KalahariTickets.API.Controllers
 
         }
 
+        [HttpDelete(("{id}"))]
+        public async Task<IActionResult> DeleteTicket(int userId, int id)
+        {
+            if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+            
+            var user = await _repo.GetClient(userId);
+
+            if(!user.Tickets.Any(p => p.Id == id))
+                return Unauthorized();
+
+            var ticketFromRepo = await _repo.GetTicket(id);
+
+           // var deleteParams = new DeletionParams(ticketFromRepo.Id);
+
+           _repo.Delete(ticketFromRepo);
+
+            if(await _repo.SaveAll())
+                return Ok();
+
+            return BadRequest("Failed to delete ticket");
+
+        }
+
     }
 }

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using KalahariTickets.API.Models;
 using System;
+using System.Linq;
 
 namespace KalahariTickets.API.Controllers
 {
@@ -47,6 +48,20 @@ namespace KalahariTickets.API.Controllers
             return Ok(clientToReturn);
         }
 
+        [HttpGet("tickets")]
+
+        public async Task<IActionResult> GetTickets()
+        {
+
+            var tickets = await _repo.GetTickets();
+
+            if(tickets == null)
+                return BadRequest("Could not load all tickets");
+
+            return Ok(tickets);
+
+        }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateClient(int id, ClientForUpdateDto clientForUpdateDto)
         {
@@ -62,6 +77,32 @@ namespace KalahariTickets.API.Controllers
 
             throw new Exception($"Updating client {id} failed at save");
         }
+
+        
+        [HttpDelete(("{userId}"))]
+        public async Task<IActionResult> DeleteClient(int userId)
+        {
+            if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+            
+            var client= await _repo.GetClient(userId);
+
+           // if(!client.Tickets.Any(p => p.Id == id))
+              //  return Unauthorized();
+
+           // var ClienttFromRepo = await _repo.Get(id);
+
+           // var deleteParams = new DeletionParams(ticketFromRepo.Id);
+
+           _repo.Delete(client);
+
+            if(await _repo.SaveAll())
+                return Ok();
+
+            return BadRequest("Failed to delete ticket");
+
+        }
+
 
 
     }

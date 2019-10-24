@@ -101,5 +101,33 @@ namespace KalahariTickets.API.Controllers
             throw new Exception($"Technition could not be added");
             
         }
+
+        [HttpDelete(("{userId}/delete/{id}"))]
+        public async Task<IActionResult> DeleteTechnition(int userId, int id)
+        {
+            if(userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+            
+            var clientFromRepo = await _repo.GetClient(userId);
+
+            //if(!user.Tic.Any(p => p.Id == id))
+               // r//eturn Unauthorized();
+
+            var technitionFromRepo = await _repo.GetTechnition(id);
+
+            if(technitionFromRepo == null)
+                return BadRequest("technition is empty");
+
+
+           // var deleteParams = new DeletionParams(ticketFromRepo.Id);
+
+           _repo.Delete(technitionFromRepo);
+
+            if(await _repo.SaveAll())
+                return Ok();
+
+            return BadRequest("Failed to delete ticket");
+
+        }
     }
 }

@@ -109,7 +109,7 @@ namespace KalahariTickets.API.Data
 
         public async Task<Technition> GetTechnition(int id)
         {
-           var technition = await _context.Technitions.Include(t => t.Tickets).FirstOrDefaultAsync(c => c.Id == id);
+           var technition = await _context.Technitions./*Include(t => t.Tickets).*/FirstOrDefaultAsync(c => c.Id == id);
 
            /*.Include(t => t.Tickets)*/
 

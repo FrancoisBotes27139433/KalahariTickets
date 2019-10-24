@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../_services/auth.service';
+import { AlertifyService } from '../_services/alertify.service';
 
 @Component({
   selector: 'app-add-client',
@@ -9,18 +10,18 @@ import { AuthService } from '../_services/auth.service';
 export class AddClientComponent implements OnInit {
   model: any = {};
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private alertify: AlertifyService) { }
 
   ngOnInit() {
   }
 
   registerClient() {
     this.authService.register(this.model).subscribe(() => {
-      console.log('registration sucessfull');
+      this.alertify.success('registration sucessfull');
     });
   }
 
   cancel() {
-    console.log('cancelled');
+    this.alertify.message('cancelled');
   }
 }
