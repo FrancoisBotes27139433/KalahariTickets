@@ -12278,5 +12278,37 @@
         "warn": true
       }
     }
+<<<<<<< HEAD
   }
+=======
+  },
+  "logs": [
+    {
+<<<<<<< HEAD
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: Microsoft.AspNetCore.App 2.1.1 requires Microsoft.EntityFrameworkCore.SqlServer (>= 2.1.1 && < 2.2.0) but version Microsoft.EntityFrameworkCore.SqlServer 2.2.6 was resolved.",
+      "libraryId": "Microsoft.EntityFrameworkCore.SqlServer",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
+    {
+      "code": "NU1107",
+      "level": "Error",
+      "message": "Version conflict detected for Microsoft.EntityFrameworkCore. Install/reference Microsoft.EntityFrameworkCore 2.2.6 directly to project KalahariTickets.API to resolve this issue. \r\n KalahariTickets.API -> Microsoft.EntityFrameworkCore.SqlServer 2.2.6 -> Microsoft.EntityFrameworkCore.Relational 2.2.6 -> Microsoft.EntityFrameworkCore (>= 2.2.6) \r\n KalahariTickets.API -> Microsoft.AspNetCore.App 2.1.1 -> Microsoft.EntityFrameworkCore (>= 2.1.1 && < 2.2.0).",
+      "libraryId": "Microsoft.EntityFrameworkCore",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+=======
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\gerri\\Documents\\NWU\\ITRW324\\ProjectNew2\\KalahariTickets\\KalahariTickets.API\\obj\\KalahariTickets.API.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> GoogleMaps
+    }
+  ]
+>>>>>>> MobileApp
 }
