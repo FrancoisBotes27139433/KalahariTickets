@@ -12,10 +12,7 @@ import { OpenTicketComponent } from './open-ticket/open-ticket.component';
 import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { OpenClientComponent } from './open-client/open-client.component';
-<<<<<<< HEAD
 import { AddTechnitionComponent } from './add-technition/add-technition.component';
-=======
->>>>>>> GoogleMaps
 
 
 
@@ -26,21 +23,13 @@ const routes: Routes = [
     { path: 'home', component: HomeComponent},
     { path: 'login', component: LoginComponent},
     { path: 'map', component: MapComponent},
-<<<<<<< HEAD
     { path: 'openticket', component: OpenTicketComponent},
     { path: 'editticket', component: EditTicketComponent},
     { path: 'addticket/:id', component: AddTicketComponent},
     { path: 'client/:id', component: OpenClientComponent},
     { path: 'addclient', component: AddClientComponent},
-    { path: 'addtechntion', component: AddTechnitionComponent}
+    { path: 'addtechntion', component: AddTechnitionComponent},
 
-=======
-    { path: 'addclient', component: AddClientComponent},
-    { path: 'openticket', component : OpenTicketComponent},
-    { path: 'editticket', component : EditTicketComponent},
-    { path: 'addticket', component : AddTicketComponent},
-    { path: 'openclient', component: OpenClientComponent}
->>>>>>> GoogleMaps
   ];
 
 @NgModule({

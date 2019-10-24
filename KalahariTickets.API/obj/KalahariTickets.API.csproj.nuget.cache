@@ -1,15 +1,5 @@
 {
   "version": 1,
-<<<<<<< HEAD
-  "dgSpecHash": "R3VtijqlKuYrDG05FaM8bcCNh4DzVSLRIiTOWZDhzJApl8d3+NwAA1eyEp9fnjjEoGwSZi8kVzy3bthXuDQ0zQ==",
+  "dgSpecHash": "gmmFG/RLJhM9g3h8GTHkQBRHskIOAIpHGmpx3OAF+TIpBlGFKiPPkenTlMt1zPN4S7/JDMv77YvypiE6D6yavg==",
   "success": true
-=======
-<<<<<<< HEAD
-  "dgSpecHash": "i+YKzEO7pSGNQj4OwrXW/OAIhCOGvDsGKgMiWbqJXiJu3zjyjqqzqlw+9ID4X5NAWqSvDt0oowcPnkS9ABfBTw==",
-  "success": false
-=======
-  "dgSpecHash": "IZwYlyOuRqhhNbV8LZj7+kH35av8SDfej68MCy+or0d6DjW+NTaw9G599wFGwrymVMS9Ii7NHRQ1S++96dvM+Q==",
-  "success": true
->>>>>>> GoogleMaps
->>>>>>> MobileApp
 }

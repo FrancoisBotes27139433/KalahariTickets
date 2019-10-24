@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {}
+    "c:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {
+    "c:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
+        "projectUniqueName": "c:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
         "projectName": "KalahariTickets.API",
-        "projectPath": "C:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
+        "projectPath": "c:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\KalahariTickets.API.csproj",
         "packagesPath": "C:\\Users\\Francois\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\obj\\",
+        "outputPath": "c:\\Users\\Francois\\Desktop\\KalahariTickets\\KalahariTickets.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

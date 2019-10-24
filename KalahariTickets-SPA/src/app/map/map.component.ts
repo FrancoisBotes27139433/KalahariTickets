@@ -13,7 +13,7 @@ export class MapComponent{
   }
 location: Location 
 
-  destination: ILatLng = location= {
+  destination: ILatLng = location = {
     latitude: -26.69,
     longitude: 27.09
   };
