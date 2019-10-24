@@ -48,6 +48,20 @@ namespace KalahariTickets.API.Controllers
             return Ok(clientToReturn);
         }
 
+        [HttpGet("tickets")]
+
+        public async Task<IActionResult> GetTickets()
+        {
+
+            var tickets = await _repo.GetTickets();
+
+            if(tickets == null)
+                return BadRequest("Could not load all tickets");
+
+            return Ok(tickets);
+
+        }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateClient(int id, ClientForUpdateDto clientForUpdateDto)
         {

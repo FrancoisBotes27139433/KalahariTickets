@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './_services/auth.service';
+import { AlertifyService } from './_services/alertify.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { AuthService } from './_services/auth.service';
   styleUrls: ['./styles.scss']
 })
 export class AppComponent {
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private alertify: AlertifyService) { }
   title = 'KalahariTickets';
   model: any = {};
   lat = 51.678418;
@@ -15,9 +16,9 @@ export class AppComponent {
 
   login() {
     this.authService.login(this.model).subscribe(next => {
-      console.log('Logged in successfully');
+      this.alertify.success('Logged in successfully');
     }, error => {
-      console.log('Failed to Login');
+      this.alertify.error('Failed to Login');
     });
   }
 
@@ -28,6 +29,6 @@ export class AppComponent {
 
   logout() {
     localStorage.removeItem('token');
-    console.log('logged out');
+    this.alertify.message('logged out');
   }
 }
