@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "",
+    "appService.defaultWebAppToDeploy": "/subscriptions/76f9c482-a600-459e-9202-5773fa833a56/resourceGroups/KalahariTickets/providers/Microsoft.Web/sites/KalahariTicket"
+}
