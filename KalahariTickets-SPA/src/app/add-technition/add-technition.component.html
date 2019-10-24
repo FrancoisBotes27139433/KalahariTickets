@@ -1,0 +1,18 @@
+<h2>Add Technition</h2>
+
+<form #registerForm="ngForm" (ngSubmit)=' addTechnition()'  >
+  <label>FirstName</label>
+  <input required name="Username" [(ngModel)]="model.FirstName" Username>
+  <label>LastName</label>
+  <input required name="Password" [(ngModel)]="model.LastName" Password>
+  <label>monthlySalary</label>
+  <input required name="phoneNumber" [(ngModel)]="model.MonthlySalary" PhoneNumber>
+  <label>Age</label>
+  <input required name="emailAddress" [(ngModel)]="model.Age" EmailAddress>
+
+  <!-- <button class="green darken-4 btn mt-5"  type="submit">Add Client</button> -->
+  <button class="amber darken-4 btn mt-5 ml-2" (click)="addTechnition()" >Add Technition</button>
+</form>
+
+
+<!-- (click)='addTechnition()' -->

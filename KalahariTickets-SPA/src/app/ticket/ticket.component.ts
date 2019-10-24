@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./ticket.component.scss']
 })
 export class TicketComponent implements OnInit {
-  ticket: Tickets[];
+  tickets: Tickets[];
 
   constructor(private ticketService: TicketService, private route: ActivatedRoute) { }
 
@@ -19,8 +19,8 @@ export class TicketComponent implements OnInit {
   }
 
   loadTickets() {
-    this.ticketService.getTickets(this.route.snapshot.params.id).subscribe((ticket: Tickets[]) => {
-      this.ticket = ticket;
+    this.ticketService.getTickets().subscribe((tickets: Tickets[]) => {
+      this.tickets = tickets;
     });
   }
   // loadClients() {

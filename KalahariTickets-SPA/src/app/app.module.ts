@@ -24,6 +24,8 @@ import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { OpenClientComponent } from './open-client/open-client.component';
 
+import { AddTechnitionComponent } from './add-technition/add-technition.component';
+
 export function tokenGetter() {
    return localStorage.getItem('token');
  }
@@ -44,7 +46,8 @@ export function tokenGetter() {
       OpenTicketComponent,
       EditTicketComponent,
       AddTicketComponent,
-      OpenClientComponent
+      OpenClientComponent,
+      AddTechnitionComponent
    ],
    imports: [
       BrowserModule,
@@ -53,8 +56,10 @@ export function tokenGetter() {
       RouterModule,
       AppRoutingModule,
       AgmCoreModule.forRoot({
-         apiKey: 'AIzaSyAorO1PoQngwMQGg1qmA2q7qHCZmyC85qE'
-      }),
+         apiKey: ''
+   
+}),
+
       JwtModule.forRoot({
          config: {
            tokenGetter,

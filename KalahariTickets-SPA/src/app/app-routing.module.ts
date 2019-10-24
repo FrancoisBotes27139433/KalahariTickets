@@ -12,6 +12,7 @@ import { OpenTicketComponent } from './open-ticket/open-ticket.component';
 import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { OpenClientComponent } from './open-client/open-client.component';
+import { AddTechnitionComponent } from './add-technition/add-technition.component';
 
 
 
@@ -26,7 +27,9 @@ const routes: Routes = [
     { path: 'editticket', component: EditTicketComponent},
     { path: 'addticket/:id', component: AddTicketComponent},
     { path: 'client/:id', component: OpenClientComponent},
-    { path: 'addclient', component: AddClientComponent}
+    { path: 'addclient', component: AddClientComponent},
+    { path: 'addtechntion', component: AddTechnitionComponent}
+
   ];
 
 @NgModule({

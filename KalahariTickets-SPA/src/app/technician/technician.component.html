@@ -1,9 +1,40 @@
-<h1>Technicians</h1>
+<h2>Technitions</h2>
 
-<ul>
-  <li>
-    <p class="name">Technician Name</p>
-    <p class="country">User</p>
-    <a class="site">Open</a>
-  </li>
-</ul>
+<a [routerLink]="['/addtechntion']">Add Techntion</a>
+
+<!-- <div class="row">
+  <div class="col s11 m5">
+      <div class="card green darken-4 stickey-action hoverable">
+          <div class="card-content white-text activator">
+              <span class="card-title">Firstname & Lastname</span>
+              <p>Company</p><p>
+              <p>Open Tickets: OpenTicketCount</p>
+          </div>
+          <div class="card-action">
+              <a [routerLink]="['/addticket']" >Add Ticket</a>
+              <a [routerLink]="['/openclient']" >Open</a>
+          </div>
+      </div>
+  </div>
+</div> -->
+<div class="container">
+<div *ngFor="let technition of technitions">
+  <div class="row">
+    <div class="col s11 m5">
+        <div class="card green darken-4 stickey-action hoverable">
+            <div class="card-content white-text activator">
+                <span class="card-title"> Technition ID : {{technition.id}}</span>
+                <p>FirstName: {{technition.firstName}}</p><br>
+                <p>LastName: {{technition.lastName}}</p><br>
+                <!-- <p>Open Tickets: {{technition.tickets}}</p> -->
+            </div>
+            <div class="card-action">
+                <!-- <a [routerLink]="['/addticket', client.id]">Add Ticket</a> -->
+                <button type="button" class="btn btn-sm btn-danger" (click)="deleteTechnition(technition.id)"><i class="fa fa-trash-o"></i></button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+  
+

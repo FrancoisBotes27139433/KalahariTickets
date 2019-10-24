@@ -14,8 +14,8 @@ export class TicketService {
 
   constructor(private http: HttpClient) { }
 
-  getTickets(id): Observable<Tickets[]> {
-    return this.http.get<Tickets[]>(this.baseUrl + 'clients/' + id + 'tickets');
+  getTickets(): Observable<Tickets[]> {
+    return this.http.get<Tickets[]>(this.baseUrl + 'allTicket/');
   }
 
   getTicket(id): Observable<Tickets> {

@@ -66,7 +66,7 @@ namespace KalahariTickets.API.Controllers
 
         [HttpPost("AddTechnition")]
 
-        public async Task<IActionResult> AddTechnition([FromForm]TechnitionForRegisterDto technitionForRegisterDto)
+        public async Task<IActionResult> AddTechnition(TechnitionForRegisterDto technitionForRegisterDto)
         {
             // validate reguest 
 
