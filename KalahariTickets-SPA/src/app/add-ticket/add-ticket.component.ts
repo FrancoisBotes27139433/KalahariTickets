@@ -13,7 +13,7 @@ export class AddTicketComponent implements OnInit {
   model: any = {};
   ticket: Tickets;
 
-  constructor(private ticketService: TicketService, private route: ActivatedRoute) { }
+  constructor(private ticketService: TicketService, private route: ActivatedRoute, private authService: AuthService) { }
 
   ngOnInit() {
   }

@@ -5,12 +5,6 @@ import { Observable } from 'rxjs';
 import { Client } from '../_model/client';
 import { Tickets } from '../_model/tickets';
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    Authorization: 'Bearer ' + localStorage.getItem('token')
-  })
-};
-
 @Injectable({
   providedIn: 'root'
 })
