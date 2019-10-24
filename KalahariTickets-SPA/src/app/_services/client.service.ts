@@ -24,4 +24,9 @@ constructor(private http: HttpClient) { }
   getOpenTickets(id): Observable<Tickets[]> {
     return this.http.get<Tickets[]>(this.baseUrl + 'clients/' + id + 'GetOpenTickets');
   }
+
+  getTickets(userId): Observable<Tickets[]> {
+    return this.http.get<Tickets[]>(this.baseUrl + 'clients/' + userId + '/tickets');
+  }
+
 }

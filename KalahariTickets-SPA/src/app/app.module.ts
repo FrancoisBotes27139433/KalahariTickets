@@ -23,6 +23,7 @@ import { OpenTicketComponent } from './open-ticket/open-ticket.component';
 import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
 import { AddTicketComponent } from './add-ticket/add-ticket.component';
 import { OpenClientComponent } from './open-client/open-client.component';
+import { RegisterComponent } from './register/register.component';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -44,7 +45,8 @@ export function tokenGetter() {
       OpenTicketComponent,
       EditTicketComponent,
       AddTicketComponent,
-      OpenClientComponent
+      OpenClientComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,
@@ -53,7 +55,7 @@ export function tokenGetter() {
       RouterModule,
       AppRoutingModule,
       AgmCoreModule.forRoot({
-         apiKey: 'AIzaSyAorO1PoQngwMQGg1qmA2q7qHCZmyC85qE'
+         apiKey: 'AIzaSyAor01PoQngwMQGg1qmA2q7qHCZmX85qE'
       }),
       JwtModule.forRoot({
          config: {

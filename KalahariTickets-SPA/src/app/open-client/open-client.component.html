@@ -18,6 +18,32 @@
         <th>Date Added</th>
         <th>Urgent</th>
     </tr>
+
+    <tr *ngFor="let ticket of ticket" class="field">
+            <td>
+              <p>{{ticket.title}}</p>
+            </td>
+            <td>
+              <p>{{ticket.dateIssued}}</p>
+            </td>
+            <td>
+              <p>{{ticket.isUrgent}}</p>
+            </td>
+            <td>
+              <-- added code -->
+              <p>{{loadTicket(ticket.clientId)}}</p>
+    
+            </td>
+    
+            
+    </tr>
+
+    <!-- <div class="container">
+        <div *ngFor="let ticket of ticket" class="col-lg-4">
+
+        </div>
+
+    </div> -->
     <!-- @foreach (var ticket in Model.Tickets) {
     <tr>
         <th>

@@ -33,15 +33,18 @@
 
                 <div *ngIf="!loggedIn()">
 
-
                 <li class="nav-item amber-text text-darken-2">
                     <a class="nav-item amber-text text-darken-2" [routerLink]="['/login']">Log in</a>
                 </li>
                 </div>
+                
             </ul>
         </div>
     </nav>
     <main class="container">
+            <div *ngIf="!loggedIn()">
+                    <app-register></app-register>
+            </div>
     </main>
 </body>
 <!-- <header class="navbar navbar-dark green darken-4">

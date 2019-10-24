@@ -3,6 +3,7 @@ import { ClientService } from '../_services/client.service';
 import { Client } from '../_model/client';
 import { ActivatedRoute } from '@angular/router';
 import { Tickets } from '../_model/tickets';
+import { TicketService } from '../_services/ticket.service';
 
 @Component({
   selector: 'app-open-client',
@@ -12,10 +13,11 @@ import { Tickets } from '../_model/tickets';
 export class OpenClientComponent implements OnInit {
   client: Client;
   ticket: Tickets[];
-  constructor(private clientService: ClientService, private route: ActivatedRoute) { }
+  constructor(private clientService: ClientService, private route: ActivatedRoute, private ticketService: TicketService) { }
 
   ngOnInit() {
     this.loadClient();
+    this.loadTicket();
   }
 
   loadClient() {
@@ -23,5 +25,12 @@ export class OpenClientComponent implements OnInit {
       this.client = client;
     });
   }
+
+  loadTicket() {
+    this.clientService.getTickets(this.route.snapshot.params.id).subscribe((ticket: Tickets[]) => {
+      this.ticket = ticket;
+    });
+  }
+
 
 }
