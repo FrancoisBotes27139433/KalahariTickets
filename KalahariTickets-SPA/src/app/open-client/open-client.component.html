@@ -1,0 +1,34 @@
+<h1>Username :  {{client?.username}} </h1>
+
+<h3>Client Details</h3>
+<p >
+  <br>
+    Phone : {{client?.phoneNumber}} <br>
+    Email : {{client?.email}} <br>
+    Address : {{client?.address}} <br>
+    Date Added : {{client?.dateAdded}} <br>
+</p>
+
+<h3 >Open Tickets: {{client?.tickets}}</h3>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Date Added</th>
+        <th>Urgent</th>
+    </tr>
+    <!-- @foreach (var ticket in Model.Tickets) {
+    <tr>
+        <th>
+            <a asp-action="Open" asp-controller="Tickets" asp-route-id="@ticket.Id">@ticket.Title</a>
+        </th>
+        <th>@ticket.DateAdded.ToString("d")</th>
+        @if (ticket.IsUrgent) {
+        <th>&#10004;</th>
+        }
+        else
+        {
+        <th></th>
+        }
+    </tr>
+    } -->
+</table>

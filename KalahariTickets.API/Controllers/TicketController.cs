@@ -105,7 +105,8 @@ namespace KalahariTickets.API.Controllers
             {
                 Title = ticketForCreationDto.Title,
                 Description = ticketForCreationDto.Description,
-               // DateIssued = DateTime.Now,
+                Notes = ticketForCreationDto.Notes,
+                DateIssued = DateTime.Now,
                 //DateClossed = 
 
                // Username = clientForRegisterDto.Username,
